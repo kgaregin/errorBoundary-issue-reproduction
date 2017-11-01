@@ -2,10 +2,16 @@ import {Dispatch} from "redux";
 import {WithStyles} from "material-ui";
 import {FETCH_CONTEXT, MODE} from "./Enums";
 import {RouteComponentProps} from "react-router-dom";
-import {IPost} from "../../../server/db/models/blog/post";
 import {FETCH_STATUS} from "../../core/utils/ServiceUtils";
 import {INavigationActions} from "../../core/modules/Navigation";
 
+export interface IPost {
+    id?: number,
+    title?: string,
+    message?: string,
+    createdAt?: string,
+    updatedAt?: string
+}
 
 /**
  * Blog model.

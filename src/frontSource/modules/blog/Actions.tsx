@@ -1,7 +1,7 @@
 import {Dispatch} from "react-redux";
 import {FETCH_FAIL, FETCH_PENDING, FETCH_SUCCESS, ServiceUtils} from "../../core/utils/ServiceUtils";
 import {FETCH_CONTEXT, MODE} from "./Enums";
-import {IPost} from "../../../server/db/models/blog/post";
+import {IPost} from "./Models";
 import {handleLocationChange} from "../../core/store/Actions";
 
 /** Async request methods. */

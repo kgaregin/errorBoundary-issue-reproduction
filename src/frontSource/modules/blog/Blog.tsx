@@ -21,7 +21,7 @@ import {IBlog, IBlogActions, IBlogProps} from "./Models";
 import {Dispatch, bindActionCreators} from "redux";
 import {IReduxStore} from "../../core/store/reduxStore";
 import {FETCH_STATUS} from "../../core/utils/ServiceUtils";
-import {IPost} from "../../../server/db/models/blog/post";
+import {IPost} from "./Models";
 import {sortBy} from "lodash";
 import {ContentEditableField} from "../../components/ContentEditableField";
 import {FormEventWithTargetValue} from "../../core/Interfaces";
