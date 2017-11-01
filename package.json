@@ -57,7 +57,7 @@
     "redux": "^3.7.2",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
-    "typescript": "^2.5.2",
+    "typescript": "^2.6.1",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"

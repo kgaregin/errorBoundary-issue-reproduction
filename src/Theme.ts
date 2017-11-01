@@ -1,5 +1,5 @@
 import {green, red, grey} from 'material-ui/colors';
-import createMuiTheme from "material-ui/styles/createMuiTheme";
+import createMuiTheme, {ThemeOptions} from 'material-ui/styles/createMuiTheme';
 import {Theme} from "material-ui/styles";
 
 export const theme: Theme = createMuiTheme({
@@ -9,4 +9,4 @@ export const theme: Theme = createMuiTheme({
         error: red,
         type: "dark"
     }
-});
+} as ThemeOptions);

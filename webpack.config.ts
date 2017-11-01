@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/frontSource/index.tsx',
+    entry: './src/index.tsx',
     output: {
-        path: path.resolve(__dirname, 'src/dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
     devtool: 'source-map',
@@ -22,7 +22,7 @@ module.exports = {
             enforce: 'pre',
             test: /\.ts|\.tsx$/,
             loader: 'source-map-loader',
-            include: path.resolve(__dirname, 'src/frontSource')
+            include: path.resolve(__dirname, './src')
         }, {
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
@@ -36,9 +36,9 @@ module.exports = {
             test: /\.ts|\.tsx$/,
             loader: 'awesome-typescript-loader',
             options: {
-                configFileName: path.resolve(__dirname, 'src/frontSource/tsconfig.json')
+                configFileName: path.resolve(__dirname, './tsconfig.json')
             },
-            include: path.resolve(__dirname, 'src/frontSource'),
+            include: path.resolve(__dirname, './src'),
             exclude: /node_modules/
         }]
     },

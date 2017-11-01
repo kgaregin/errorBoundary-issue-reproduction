@@ -1,10 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/frontSource",
+    "baseUrl": "src/src",
     "lib": [
       "dom",
       "es2017"
-    ]
+    ],
+    "pretty": true,
+    "module": "commonjs",
+    "noEmit": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "target": "ES5",
+    "jsx": "react",
+    "sourceMap": true
   },
   "typeRoots": [
     "node_modules/@types",
@@ -23,7 +31,7 @@
     "react-scrollbar"
   ],
   "include": [
-    "src/frontSource/**/*",
+    "src/src/**/*",
     "node_modules/@types/**/*.d.ts",
     "node_modules/material-ui-icons/*.d.ts"
   ]
