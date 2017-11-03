@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/src",
+    "baseUrl": "src_old/src",
     "lib": [
       "dom",
       "es2017"
     ],
+    "allowJs": true,
     "pretty": true,
     "module": "commonjs",
     "noEmit": true,
@@ -31,7 +32,7 @@
     "react-scrollbar"
   ],
   "include": [
-    "src/src/**/*",
+    "src_old/src/**/*",
     "node_modules/@types/**/*.d.ts",
     "node_modules/material-ui-icons/*.d.ts"
   ]

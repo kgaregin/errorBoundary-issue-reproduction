@@ -2,43 +2,34 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/index.tsx',
+    entry: './src/index.jsx',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
     devtool: 'source-map',
     devServer: {
-        contentBase: './src/dist',
+        contentBase: './',
         port: 8080,
         hot: true
     },
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: ['d.ts','.ts', '.tsx', '.js', '.json']
+        extensions: ['d.ts','.ts', '.tsx', '.js', '.jsx', '.json']
     },
     module: {
         rules: [{
             enforce: 'pre',
-            test: /\.ts|\.tsx$/,
+            test: /\.ts|\.tsx|\.js|\.jsx$/,
             loader: 'source-map-loader',
-            include: path.resolve(__dirname, './src')
+            include: [path.resolve(__dirname, './src'), path.resolve(__dirname, './src_old')]
         }, {
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-        }, {
-            test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-            loader: 'url-loader',
-            options: {
-                limit: 10000
-            }
-        }, {
-            test: /\.ts|\.tsx$/,
+            test: /\.ts|\.tsx|\.js|\.jsx$/,
             loader: 'awesome-typescript-loader',
             options: {
                 configFileName: path.resolve(__dirname, './tsconfig.json')
             },
-            include: path.resolve(__dirname, './src'),
+            include: [path.resolve(__dirname, './src'), path.resolve(__dirname, './src_old')],
             exclude: /node_modules/
         }]
     },
